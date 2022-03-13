@@ -20,7 +20,7 @@ export function Chakra({cookies, children}) {
     )
 }
 
-export function getServerSideProps(req: NextApiRequest) {
+export function getServerSideProps({ req }) {
     return {
         props: {
             cookies: req.headers.cookie ?? '',

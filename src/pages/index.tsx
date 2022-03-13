@@ -10,3 +10,5 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export { getServerSideProps } from "../styles/chakra";

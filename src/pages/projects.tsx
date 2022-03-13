@@ -10,3 +10,5 @@ const Projects: NextPage = () => {
 }
 
 export default Projects
+
+export { getServerSideProps } from "../styles/chakra";

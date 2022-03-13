@@ -10,3 +10,5 @@ const Contact: NextPage = () => {
 }
 
 export default Contact
+
+export { getServerSideProps } from "../styles/chakra";
