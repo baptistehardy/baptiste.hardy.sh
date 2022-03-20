@@ -10,9 +10,9 @@ import {
     MenuList,
     MenuButton,
     IconButton,
-    useColorModeValue
+    useColorModeValue, Button
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { DownloadIcon, HamburgerIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import ThemeButton from './ThemeButton'
 import LinkItem from './LinkItem'
@@ -62,6 +62,10 @@ const Navbar = () => {
     
                 { /** @ts-ignore */ }
                 <Box flex={1} align="right">
+                    <Button leftIcon={<DownloadIcon/>} mr={2} variant={'outline'} fontSize={'15px'} fontWeight={'normal'} title={'Télécharger mon CV'}>
+                        CV
+                    </Button>
+    
                     <ThemeButton />
                     
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>

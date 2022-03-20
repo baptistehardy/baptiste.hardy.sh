@@ -37,11 +37,10 @@ const MainLayout: FunctionComponent<MainLayoutProps> = ({ title, children }) => 
             
             <Container maxW="container.md" pt={20}>
                 <motion.div
-                    initial="hidden"
-                    animate="enter"
-                    exit="exit"
-                    variants={variants}
-                    transition={{ duration: 0.3, type: 'easeInOut' }}
+                    initial={{x: 0, y: 20, opacity: 0 }}
+                    animate={{ x: 0, y: 0, opacity: 1 }}
+                    exit={{ x: -0, y: 20, opacity: 0 }}
+                    transition={{ type: 'easeInOut', duration: 0.3 }}
                     style={{ position: 'relative' }}
                 >
                     {children}
