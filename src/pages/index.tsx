@@ -4,8 +4,7 @@ import Section from "../components/Section"
 import Paragraph from "../components/Paragraph"
 import SectionTitle from '../components/SectionTitle'
 import { Timeline, TimelineSectionType } from "../components/Timeline"
-import { Box, Button, Flex, Heading, Image, List, ListItem, Text, Link, useColorModeValue } from "@chakra-ui/react"
-import { IoLogoGithub, IoLogoGitlab, IoMail } from 'react-icons/io5'
+import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react"
 
 const Home: NextPage = () => {
     
@@ -22,7 +21,7 @@ const Home: NextPage = () => {
             year: '2021-',
             description: (
                 <>
-                    Travail à <Text as={'span'} fontWeight={'bold'}><Text as={'span'} color={'#337ab7'}>CM'</Text><Text as={'span'} color={'#d37215'}>IN</Text></Text>
+                    Travail à <Text as={'span'} fontWeight={'bold'}><Text as={'span'} color={'#337ab7'}>CM&apos;</Text><Text as={'span'} color={'#b26012'}>IN</Text></Text>
                 </>
             )
         }

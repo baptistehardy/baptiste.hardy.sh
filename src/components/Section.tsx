@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion'
-import { chakra, shouldForwardProp } from '@chakra-ui/react'
 import { FunctionComponent, ReactNode } from "react"
 import MotionDiv from '../styles/motion'
 

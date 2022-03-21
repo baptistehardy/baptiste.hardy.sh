@@ -3,6 +3,7 @@ import MainLayout from "../components/layouts/MainLayout"
 import ProjectCard, { Project } from "../components/ProjectCard"
 
 const Projects: NextPage = () => {
+    
     const projects: Array<Project> = [
         {
             image: {

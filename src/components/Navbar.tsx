@@ -10,7 +10,7 @@ import {
     MenuList,
     MenuButton,
     IconButton,
-    useColorModeValue, Button
+    useColorModeValue
 } from '@chakra-ui/react'
 import { DownloadIcon, HamburgerIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
@@ -21,25 +21,25 @@ import Logo from './Logo'
 const Navbar = () => {
     return (
         <Box
-            position="fixed"
-            as="nav"
-            w="100%"
+            position={'fixed'}
+            as={'nav'}
+            w={'100%'}
             bg={useColorModeValue('#ffffff50', '#20202350')}
             sx={{ backdropFilter: 'blur(10px)' }}
             zIndex={1}
         >
             
             <Container
-                display="flex"
+                display={'flex'}
                 p={2}
-                maxW="container.md"
+                maxW={'container.md'}
                 // @ts-ignore
-                justify="space-between"
-                wrap="wrap"
-                align="center"
+                justify={'space-between'}
+                wrap={'wrap'}
+                align={'center'}
             >
-                <Flex align="center" mr={5}>
-                    <Heading as="h1" size="md" letterSpacing={'wide'}>
+                <Flex align={'center'} mr={5}>
+                    <Heading as={'h1'} size={'md'} letterSpacing={'wide'}>
                         <Logo />
                     </Heading>
                 </Flex>
@@ -48,42 +48,43 @@ const Navbar = () => {
                     direction={{ base: 'column', md: 'row' }}
                     display={{ base: 'none', md: 'flex' }}
                     width={{ base: 'full', md: 'auto' }}
-                    alignItems="center"
+                    alignItems={'center'}
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}
                 >
-                    <LinkItem href="/projects">
+                    <LinkItem href={'/projects'}>
                         Projets
                     </LinkItem>
-                    <LinkItem href="/contact">
+                    <LinkItem href={'/contact'}>
                         Contact
                     </LinkItem>
                 </Stack>
     
                 { /** @ts-ignore */ }
-                <Box flex={1} align="right">
-                    <Button leftIcon={<DownloadIcon/>} mr={2} variant={'outline'} fontSize={'15px'} fontWeight={'normal'} title={'Télécharger mon CV'}>
-                        CV
-                    </Button>
-    
+                <Box flex={1} align={'right'}>
+                    {/*<Link href={'https://rxresu.me/baptistehardy/baha2022'} target={'_blank'} _hover={{ textDecoration: 'none' }}>*/}
+                    {/*    <Button leftIcon={<DownloadIcon/>} mr={2} variant={'outline'} fontSize={'15px'} fontWeight={'normal'} title={'Télécharger mon CV'}>*/}
+                    {/*        CV*/}
+                    {/*    </Button>*/}
+                    {/*</Link>*/}
                     <ThemeButton />
                     
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-                        <Menu isLazy id="navbar-menu">
+                        <Menu isLazy id={'navbar-menu'}>
                             <MenuButton
                                 as={IconButton}
                                 icon={<HamburgerIcon />}
-                                variant="outline"
-                                aria-label="Menu"
+                                variant={'outline'}
+                                aria-label={'Menu'}
                             />
                             <MenuList>
-                                <NextLink href="/" passHref>
+                                <NextLink href={'/'} passHref>
                                     <MenuItem as={Link}>Home</MenuItem>
                                 </NextLink>
-                                <NextLink href="/projects" passHref>
+                                <NextLink href={'/projects'} passHref>
                                     <MenuItem as={Link}>Projets</MenuItem>
                                 </NextLink>
-                                <NextLink href="/contact" passHref>
+                                <NextLink href={'/contact'} passHref>
                                     <MenuItem as={Link}>Contact</MenuItem>
                                 </NextLink>
                             </MenuList>

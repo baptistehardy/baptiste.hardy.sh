@@ -1,6 +1,15 @@
 import { FunctionComponent, ReactNode } from "react"
 import { Box, Text } from "@chakra-ui/react"
 
+type TimelineSectionType = {
+    year: string,
+    description: ReactNode
+}
+
+interface TimelineProps {
+    timeline: Array<TimelineSectionType>,
+    children?: ReactNode
+}
 
 const TimelineSection: FunctionComponent = ({ children }) => {
     return (
@@ -24,16 +33,6 @@ const TimelineYear: FunctionComponent = ({ children }) => {
     )
 }
 
-type TimelineSectionType = {
-    year: string,
-    description: ReactNode
-}
-
-interface TimelineProps {
-    timeline: Array<TimelineSectionType>,
-    children?: ReactNode
-}
-
 const Timeline: FunctionComponent<TimelineProps> = ({ timeline }) => {
     return (
         <>
@@ -48,7 +47,6 @@ const Timeline: FunctionComponent<TimelineProps> = ({ timeline }) => {
         </>
     )
 }
-
 
 export { Timeline, TimelineSection, TimelineYear }
 export type { TimelineSectionType }

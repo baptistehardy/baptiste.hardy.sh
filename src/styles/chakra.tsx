@@ -1,12 +1,7 @@
 import '@fontsource/m-plus-1/400.css'
 import '@fontsource/dm-mono/300.css'
 
-import {
-    ChakraProvider,
-    cookieStorageManager,
-    localStorageManager,
-} from '@chakra-ui/react'
-import { NextApiRequest } from 'next'
+import { ChakraProvider, cookieStorageManager, localStorageManager } from '@chakra-ui/react'
 import theme from "./theme"
 
 export function Chakra({cookies, children}) {
