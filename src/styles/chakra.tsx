@@ -1,3 +1,6 @@
+import '@fontsource/m-plus-1/400.css'
+import '@fontsource/dm-mono/300.css'
+
 import {
     ChakraProvider,
     cookieStorageManager,

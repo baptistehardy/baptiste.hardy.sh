@@ -24,8 +24,8 @@ const Navbar = () => {
             position="fixed"
             as="nav"
             w="100%"
-            bg={useColorModeValue('#ffffff40', '#20202380')}
-            css={{ backdropFilter: 'blur(10px)' }}
+            bg={useColorModeValue('#ffffff50', '#20202350')}
+            sx={{ backdropFilter: 'blur(10px)' }}
             zIndex={1}
         >
             
@@ -53,7 +53,7 @@ const Navbar = () => {
                     mt={{ base: 4, md: 0 }}
                 >
                     <LinkItem href="/projects">
-                        Projects
+                        Projets
                     </LinkItem>
                     <LinkItem href="/contact">
                         Contact
@@ -81,7 +81,7 @@ const Navbar = () => {
                                     <MenuItem as={Link}>Home</MenuItem>
                                 </NextLink>
                                 <NextLink href="/projects" passHref>
-                                    <MenuItem as={Link}>Projects</MenuItem>
+                                    <MenuItem as={Link}>Projets</MenuItem>
                                 </NextLink>
                                 <NextLink href="/contact" passHref>
                                     <MenuItem as={Link}>Contact</MenuItem>

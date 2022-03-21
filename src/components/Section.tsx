@@ -1,12 +1,7 @@
 import { motion } from 'framer-motion'
 import { chakra, shouldForwardProp } from '@chakra-ui/react'
 import { FunctionComponent, ReactNode } from "react"
-
-const MotionDiv = chakra(motion.div, {
-    shouldForwardProp: (prop) => {
-        return shouldForwardProp(prop) || prop === 'transition'
-    }
-})
+import MotionDiv from '../styles/motion'
 
 interface SectionProps {
     children?: ReactNode,

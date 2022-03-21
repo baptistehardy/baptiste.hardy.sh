@@ -36,7 +36,7 @@ const MainLayout: FunctionComponent<MainLayoutProps> = ({ title, children }) => 
             
             <Navbar />
             
-            <Container maxW="container.md" pt={20}>
+            <Container maxW="container.sm" pt={20}>
                 <motion.div
                     initial={{x: 0, y: 20, opacity: 0 }}
                     animate={{ x: 0, y: 0, opacity: 1 }}

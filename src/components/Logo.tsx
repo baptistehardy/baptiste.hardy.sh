@@ -5,7 +5,7 @@ const Logo: FunctionComponent = () => {
     return (
         // @ts-ignore
         <NextLink href={'/'} sx={{ textDecoration: 'none' }}>
-             Baptiste Hardy
+             BH
         </NextLink>
     )
 }

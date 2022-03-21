@@ -6,7 +6,7 @@ interface SectionTitleProps {
 }
 
 const SectionTitle: FunctionComponent<SectionTitleProps> = ({ children }) => (
-    <Heading as={'h1'} size={'lg'} >
+    <Heading as={'h1'} size={'md'} paddingBottom={3}>
         {children}
     </Heading>
 )

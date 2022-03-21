@@ -1,4 +1,5 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react"
+import { mode } from "@chakra-ui/theme-tools"
 
 const config: ThemeConfig = {
     initialColorMode: 'system',
@@ -8,7 +9,7 @@ const config: ThemeConfig = {
 const components = {
     Link: {
         baseStyle: () => ({
-            textUnderlineOffset: 5,
+            textUnderlineOffset: 10,
             _focus: {
                 boxShadow: 'none'
             },
@@ -20,9 +21,27 @@ const components = {
                 boxShadow: 'none'
             },
         })
-    }
+    },
+    Paragraph: {
+        baseStyle: () => ({
+            letterSpacing: '0.1px'
+        })
+    },
 }
 
-const theme = extendTheme({ config, components })
+const fonts = {
+    heading: 'DM Mono',
+    body: "'M PLUS 1'"
+}
+
+const styles = {
+    global: props => ({
+        body: {
+            bg: mode('#ffffff', '#202023')(props)
+        }
+    })
+}
+
+const theme = extendTheme({ config, components, fonts, styles })
 
 export default theme
