@@ -1,9 +1,9 @@
 import { Box, Container } from "@chakra-ui/react"
 import Head from "next/head"
-import Navbar from "../Navbar"
+import Navbar from "./Navbar"
 import { motion } from "framer-motion"
 import { FunctionComponent, ReactNode } from "react"
-import Footer from "../Footer"
+import Footer from "./Footer"
 
 const variants = {
     hidden: { opacity: 0, x: 0, y: 20 },
@@ -16,7 +16,7 @@ interface MainLayoutProps {
     children: ReactNode
 }
 
-const MainLayout: FunctionComponent<MainLayoutProps> = ({ title, children }) => {
+const Layout: FunctionComponent<MainLayoutProps> = ({ title, children }) => {
     return (
         <Box as="main" pb={8}>
             <Head>
@@ -53,4 +53,4 @@ const MainLayout: FunctionComponent<MainLayoutProps> = ({ title, children }) => 
     )
 }
 
-export default MainLayout
+export default Layout

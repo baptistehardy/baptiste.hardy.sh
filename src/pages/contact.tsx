@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import MainLayout from "../components/layouts/MainLayout"
+import Layout from "../components/Layout"
 import Section from "../components/Section"
 import { IoLogoGithub, IoLogoGitlab, IoLogoTwitter, IoMail } from "react-icons/io5"
 import ContactList, { ContactType } from "../components/ContactList"
@@ -30,11 +30,11 @@ const Contact: NextPage = () => {
     ]
     
     return (
-        <MainLayout title={"Contact"}>
+        <Layout title={"Contact"}>
             <Section>
                 <ContactList contacts={contacts} />
             </Section>
-        </MainLayout>
+        </Layout>
     )
 }
 
