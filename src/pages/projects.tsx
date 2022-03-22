@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import MainLayout from "../components/layouts/MainLayout"
+import Layout from "../components/Layout"
 import ProjectCard, { Project } from "../components/ProjectCard"
 
 const Projects: NextPage = () => {
@@ -40,12 +40,12 @@ const Projects: NextPage = () => {
     let delay = 0
     
     return (
-        <MainLayout title={"Projets"}>
+        <Layout title={"Projets"}>
             {projects.map((project, key) => {
                 delay += 0.1
                 return <ProjectCard key={key} project={project} delay={delay} />
             })}
-        </MainLayout>
+        </Layout>
     )
 }
 

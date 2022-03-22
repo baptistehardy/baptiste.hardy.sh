@@ -15,31 +15,17 @@ import {
 } from "@chakra-ui/react"
 import { NextPage } from "next"
 import NextLink from "next/link"
-import MainLayout from "../../components/layouts/MainLayout"
+import Layout from "../../components/Layout"
 import { FunctionComponent } from "react"
 import { IoLogoGithub } from "react-icons/io5"
-
-const ProjectBadge: FunctionComponent = ({ children }) => {
-    return (
-        <Badge colorScheme={'blue'} marginRight={2}>{children}</Badge>
-    )
-}
+import { ProjectBadge, ProjectImage, ProjectTitle } from "../../components/ProjectDetails"
 
 const Project: NextPage = ()  => {
     
     return (
-        <MainLayout title={'Project'}>
+        <Layout title={'Project'}>
             <Container>
-                
-                <Heading size={'md'}>
-                     <NextLink href={'/projects'} passHref>
-                         <Link color={'skyblue'}>
-                            <Text as={'span'}>Projects</Text>
-                         </Link>
-                     </NextLink>
-                    <ChevronRightIcon marginX={2}/>
-                    Project <Badge padding={1} fontSize={'0.8em'}>2022</Badge>
-                </Heading>
+                <ProjectTitle projectName={'Project'} years={'2022'} />
                 
                 <Center marginY={6}>
                     <Image borderRadius={'lg'} src={'https://picsum.photos/400/200'} alt="Project Image" />
@@ -70,10 +56,10 @@ const Project: NextPage = ()  => {
                     </ListItem>
                 </List>
     
-                <Image marginBottom={4} borderRadius={'lg'} w={'full'} src={'https://picsum.photos/400/300'} alt={'Pictures'} />
-                <Image marginBottom={4} borderRadius={'lg'} w={'full'} src={'https://picsum.photos/400/300'} alt={'Pictures'} />
+                <ProjectImage src={'https://picsum.photos/400/300'} alt={'Pictures'} />
+                <ProjectImage src={'https://picsum.photos/400/300'} alt={'Pictures'} />
             </Container>
-        </MainLayout>
+        </Layout>
     )
 }
 

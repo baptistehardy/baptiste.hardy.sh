@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import MainLayout from "../components/layouts/MainLayout"
+import Layout from "../components/Layout"
 import Section from "../components/Section"
 import Paragraph from "../components/Paragraph"
 import SectionTitle from '../components/SectionTitle'
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
     ]
     
     return (
-        <MainLayout title={'Accueil'}>
+        <Layout title={'Accueil'}>
             <Section delay={0}>
                 <Flex>
                     <Image
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate delectus dignissimos eligendi libero magnam, neque placeat quas quo ratione? Beatae culpa ea ex, expedita inventore molestiae neque quo sit.
                 </Paragraph>
             </Section>
-        </MainLayout>
+        </Layout>
     )
 }
 
