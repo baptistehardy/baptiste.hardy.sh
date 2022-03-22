@@ -12,7 +12,8 @@ const Projects: NextPage = () => {
             },
             title: 'Projet 1',
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi assumenda cupiditate delectus dignissimos ea fugiat illum incidunt inventore magnam nisi",
-            tags: ['Tag 1', 'Tag 2', 'Tag 3']
+            tags: ['Tag 1', 'Tag 2', 'Tag 3'],
+            slug: 'project'
         },
         {
             image: {
@@ -21,7 +22,8 @@ const Projects: NextPage = () => {
             },
             title: 'Projet 2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi assumenda cupiditate delectus dignissimos ea fugiat illum incidunt inventore magnam nisi',
-            tags: ['Tag 1', 'Tag 2', 'Tag 3']
+            tags: ['Tag 1', 'Tag 2', 'Tag 3'],
+            slug: 'project'
         },
         {
             image: {
@@ -30,7 +32,8 @@ const Projects: NextPage = () => {
             },
             title: 'Projet 3',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi assumenda cupiditate delectus dignissimos ea fugiat illum incidunt inventore magnam nisi',
-            tags: ['Tag 1', 'Tag 2', 'Tag 3']
+            tags: ['Tag 1', 'Tag 2', 'Tag 3'],
+            slug: 'project'
         },
     ]
     
