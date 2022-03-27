@@ -20,9 +20,9 @@ const Home: NextPage = () => {
         {
             year: '2021-',
             description: (
-                <>
+                <Text as={'span'} marginLeft={-1.5}>
                     Travail à <Text as={'span'} fontWeight={'bold'}><Text as={'span'} color={'#337ab7'}>CM&apos;</Text><Text as={'span'} color={'#b26012'}>IN</Text></Text>
-                </>
+                </Text>
             )
         }
     ]
@@ -56,7 +56,10 @@ const Home: NextPage = () => {
                     Profil
                 </SectionTitle>
                 <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi assumenda cupiditate delectus dignissimos ea fugiat illum incidunt inventore magnam nisi, perferendis provident quidem repellendus tempora vel veritatis voluptatibus voluptatum?
+                    Je suis un développeur full-stack basé à Chartres (Centre-Val de Loire),
+                    avec une passion pour créer des choses qui facilitent et automatisent ma vie pour plus en profiter.
+                    <br/>
+                    Je possède les compétences pour développer des services et produits du cahier des charges, de la conception et du design, jusqu&apos;au déploiement.
                 </Paragraph>
             </Section>
             <Section delay={0.1}>
@@ -70,7 +73,7 @@ const Home: NextPage = () => {
                     Passions
                 </SectionTitle>
                 <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate delectus dignissimos eligendi libero magnam, neque placeat quas quo ratione? Beatae culpa ea ex, expedita inventore molestiae neque quo sit.
+                    Homelabbing, vélo, musique, animation japonaise
                 </Paragraph>
             </Section>
         </Layout>
