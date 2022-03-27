@@ -19,6 +19,7 @@ import Layout from "../../components/Layout"
 import { FunctionComponent } from "react"
 import { IoLogoGithub } from "react-icons/io5"
 import { ProjectBadge, ProjectImage, ProjectTitle } from "../../components/ProjectDetails"
+import Paragraph from "../../components/Paragraph"
 
 const Project: NextPage = ()  => {
     
@@ -31,9 +32,9 @@ const Project: NextPage = ()  => {
                     <Image borderRadius={'lg'} src={'https://picsum.photos/400/200'} alt="Project Image" />
                 </Center>
                 
-                <Text>
+                <Paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque eius inventore labore laudantium reiciendis repellat temporibus. Adipisci consectetur ea eveniet, illo iste iusto numquam, quibusdam quisquam reiciendis voluptas voluptate.
-                </Text>
+                </Paragraph>
             
                 <List margin={4} marginBottom={8} spacing={1}>
                     <ListItem>
