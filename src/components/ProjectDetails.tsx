@@ -35,7 +35,7 @@ const ProjectTitle: FunctionComponent<ProjectTitleProps> = ({ projectName, years
             </NextLink>
             <ChevronRightIcon marginX={2}/>
             {projectName}
-            <Badge padding={1} fontSize={'0.8em'}>
+            <Badge marginLeft={3} padding={1} fontSize={'0.8em'}>
                 {years}
             </Badge>
         </Heading>

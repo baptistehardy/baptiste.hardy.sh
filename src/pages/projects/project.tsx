@@ -14,10 +14,8 @@ import {
     Button, HStack
 } from "@chakra-ui/react"
 import { NextPage } from "next"
-import NextLink from "next/link"
 import Layout from "../../components/Layout"
-import { FunctionComponent } from "react"
-import { IoLogoGithub } from "react-icons/io5"
+import { GitHub } from "react-feather"
 import { ProjectBadge, ProjectImage, ProjectTitle } from "../../components/ProjectDetails"
 import Paragraph from "../../components/Paragraph"
 
@@ -52,7 +50,7 @@ const Project: NextPage = ()  => {
                     <ListItem>
                         <ProjectBadge>Repository</ProjectBadge>
                         <Link href={'https://github.com'} target={'_blank'} _hover={{ textDecoration: 'none' }}>
-                            <Button size={'xs'} leftIcon={<IoLogoGithub/>}>GitHub</Button>
+                            <Button size={'xs'} leftIcon={<GitHub size={14} />}>GitHub</Button>
                         </Link>
                     </ListItem>
                 </List>
