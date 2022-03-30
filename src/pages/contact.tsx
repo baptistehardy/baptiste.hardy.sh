@@ -1,8 +1,8 @@
 import { NextPage } from "next"
 import Layout from "../components/Layout"
 import Section from "../components/Section"
-import { IoLogoGithub, IoLogoGitlab, IoLogoTwitter, IoMail } from "react-icons/io5"
 import ContactList, { ContactType } from "../components/ContactList"
+import { GitHub, Gitlab, Mail, Twitter } from "react-feather"
 
 const Contact: NextPage = () => {
     
@@ -10,22 +10,22 @@ const Contact: NextPage = () => {
         {
             text: 'baptiste@hardy.sh',
             url: 'mailto:baptiste@hardy.sh',
-            icon: <IoMail/>
+            icon: <Mail size={20} />
         },
         {
             text: '@baptistehardy',
             url: 'https://github.com/baptistehardy',
-            icon: <IoLogoGithub/>
+            icon: <GitHub size={20} />
         },
         {
             text: '@baptistehardy',
             url: 'https://gitlab.com/baptistehardy',
-            icon: <IoLogoGitlab/>
+            icon: <Gitlab size={20} />
         },
         // {
         //     text: '@hardyshdev',
         //     url: 'https://twitter.com/hardyshdev',
-        //     icon: <IoLogoTwitter/>
+        //     icon: <Twitter size={20} />
         // },
     ]
     

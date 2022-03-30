@@ -22,15 +22,15 @@ const components = {
             },
         })
     },
-    Paragraph: {
+    Heading: {
         baseStyle: () => ({
-            letterSpacing: '0.1px'
+            letterSpacing: '1px'
         })
     },
 }
 
 const fonts = {
-    heading: 'DM Mono',
+    heading: 'Cabin',
     body: "'M PLUS 1'"
 }
 

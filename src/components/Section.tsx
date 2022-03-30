@@ -12,7 +12,7 @@ const Section: FunctionComponent<SectionProps> = ({ children, delay = 0 }) => (
         animate={{ y: 0, opacity: 1 }}
         // @ts-ignore
         transition={{ duration: 0.8, delay }}
-        mb={6}
+        marginBottom={10}
     >
         {children}
     </MotionDiv>

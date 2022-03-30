@@ -12,7 +12,7 @@ const SectionTitle: FunctionComponent<SectionTitleProps> = ({ children }) => (
              borderRadius={10}
              paddingX={5}
              paddingY={3}
-             marginBottom={2}
+             marginBottom={3}
              display={'inline-block'}
     >
         {children}
