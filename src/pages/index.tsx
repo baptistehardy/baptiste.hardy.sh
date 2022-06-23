@@ -6,7 +6,7 @@ import SectionTitle from '../components/SectionTitle'
 import { Timeline, TimelineSectionType } from "../components/Timeline"
 import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react"
 import ContactList, { ContactType } from "../components/ContactList"
-import { GitHub, Gitlab, Mail } from "react-feather"
+import { GitHub, Gitlab, Instagram, Linkedin, Mail } from "react-feather"
 import ProjectCard, { Project } from "../components/ProjectCard"
 
 const Home: NextPage = () => {
@@ -83,6 +83,16 @@ const Home: NextPage = () => {
         //     text: '@hardyshdev',
         //     url: 'https://twitter.com/hardyshdev',
         //     icon: <Twitter size={20} />
+        // },
+        {
+            text: 'LinkedIn',
+            url: 'https://linkedin.com/u/baptiste-hardy',
+            icon: <Linkedin size={20} />
+        },
+        // {
+        //     text: 'Instagram',
+        //     url: 'https://instagram.com/baptiste.hardy.sh',
+        //     icon: <Instagram size={20} />
         // },
     ]
     

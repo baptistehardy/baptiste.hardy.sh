@@ -6,7 +6,7 @@ interface ParagraphProps {
 }
 
 const Paragraph: FunctionComponent<ParagraphProps> = ({ children }) => (
-    <Text align={'justify'} sx={{ textIndent: '2em' }}>
+    <Text align={'justify'}>
         {children}
     </Text>
 )

@@ -1,11 +1,13 @@
 import { FunctionComponent } from "react"
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Link, Text } from "@chakra-ui/react"
 
 const Footer: FunctionComponent = () => {
     return (
         // @ts-ignore
         <Box align={'center'} fontSize={'sm'} opacity={0.7}>
-            <Text>© {new Date().getFullYear()} Baptiste Hardy</Text>
+            <Link href={'https://github.com/baptistehardy/baptiste.hardy.sh'} target={'_blank'}>
+                <Text>Designed & Built by Baptiste Hardy</Text>
+            </Link>
         </Box>
     )
 }
