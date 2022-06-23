@@ -10,7 +10,8 @@ import {
     MenuList,
     MenuButton,
     IconButton,
-    useColorModeValue
+    useColorModeValue,
+    Button
 } from '@chakra-ui/react'
 import { DownloadIcon, HamburgerIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
@@ -55,9 +56,6 @@ const Navbar = () => {
                     <LinkItem href={'/projects'}>
                         Projets
                     </LinkItem>
-                    <LinkItem href={'/contact'}>
-                        Contact
-                    </LinkItem>
                 </Stack>
     
                 { /** @ts-ignore */ }
@@ -83,9 +81,6 @@ const Navbar = () => {
                                 </NextLink>
                                 <NextLink href={'/projects'} passHref>
                                     <MenuItem as={Link}>Projets</MenuItem>
-                                </NextLink>
-                                <NextLink href={'/contact'} passHref>
-                                    <MenuItem as={Link}>Contact</MenuItem>
                                 </NextLink>
                             </MenuList>
                         </Menu>

@@ -13,7 +13,7 @@ interface ContactListProps {
 
 const ContactList: FunctionComponent<ContactListProps> = ({ contacts }) => {
     return (
-        <List marginLeft={'-30px'}>
+        <List>
             {contacts.map((contact, key) => {
                 return (
                     <ListItem key={key}>

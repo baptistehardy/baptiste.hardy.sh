@@ -5,6 +5,8 @@ import Paragraph from "../components/Paragraph"
 import SectionTitle from '../components/SectionTitle'
 import { Timeline, TimelineSectionType } from "../components/Timeline"
 import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react"
+import ContactList, { ContactType } from "../components/ContactList"
+import { GitHub, Gitlab, Mail } from "react-feather"
 
 const Home: NextPage = () => {
     
@@ -25,6 +27,29 @@ const Home: NextPage = () => {
                 </Text>
             )
         }
+    ]
+    
+    const contacts: Array<ContactType> = [
+        {
+            text: 'baptiste@hardy.sh',
+            url: 'mailto:baptiste@hardy.sh',
+            icon: <Mail size={20} />
+        },
+        {
+            text: '@baptistehardy',
+            url: 'https://github.com/baptistehardy',
+            icon: <GitHub size={20} />
+        },
+        {
+            text: '@baptistehardy',
+            url: 'https://gitlab.com/baptistehardy',
+            icon: <Gitlab size={20} />
+        },
+        // {
+        //     text: '@hardyshdev',
+        //     url: 'https://twitter.com/hardyshdev',
+        //     icon: <Twitter size={20} />
+        // },
     ]
     
     return (
@@ -75,6 +100,12 @@ const Home: NextPage = () => {
                 <Paragraph>
                     Homelabbing, vélo, musique, animation japonaise
                 </Paragraph>
+            </Section>
+            <Section delay={0.2}>
+                <SectionTitle>
+                    Contact
+                </SectionTitle>
+                <ContactList contacts={contacts} />
             </Section>
         </Layout>
     )
