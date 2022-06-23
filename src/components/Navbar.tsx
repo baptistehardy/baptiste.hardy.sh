@@ -53,18 +53,27 @@ const Navbar = () => {
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}
                 >
-                    <LinkItem href={'/projects'}>
-                        Projets
+                    <LinkItem href={'/'}>
+                        Profil
+                    </LinkItem>
+                    <LinkItem href={'/'}>
+                        Expérience
+                    </LinkItem>
+                    <LinkItem href={'/'}>
+                        Projets {/* ou Travaux */}
+                    </LinkItem>
+                    <LinkItem href={'/'}>
+                        Contact
                     </LinkItem>
                 </Stack>
     
                 { /** @ts-ignore */ }
                 <Box flex={1} align={'right'}>
-                    {/*<Link href={'https://rxresu.me/baptistehardy/baha2022'} target={'_blank'} _hover={{ textDecoration: 'none' }}>*/}
-                    {/*    <Button leftIcon={<DownloadIcon/>} mr={2} variant={'outline'} fontSize={'15px'} fontWeight={'normal'} title={'Télécharger mon CV'}>*/}
-                    {/*        CV*/}
-                    {/*    </Button>*/}
-                    {/*</Link>*/}
+                    <Link href={'https://rxresu.me/baptistehardy/baha2022'} target={'_blank'} _hover={{ textDecoration: 'none' }}>
+                        <Button leftIcon={<DownloadIcon/>} mr={2} variant={'outline'} fontSize={'15px'} fontWeight={'normal'} title={'Télécharger mon CV'}>
+                            CV
+                        </Button>
+                    </Link>
                     <ThemeButton />
                     
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -76,9 +85,6 @@ const Navbar = () => {
                                 aria-label={'Menu'}
                             />
                             <MenuList>
-                                <NextLink href={'/'} passHref>
-                                    <MenuItem as={Link}>Home</MenuItem>
-                                </NextLink>
                                 <NextLink href={'/projects'} passHref>
                                     <MenuItem as={Link}>Projets</MenuItem>
                                 </NextLink>

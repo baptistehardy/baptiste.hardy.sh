@@ -7,6 +7,7 @@ import { Timeline, TimelineSectionType } from "../components/Timeline"
 import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react"
 import ContactList, { ContactType } from "../components/ContactList"
 import { GitHub, Gitlab, Mail } from "react-feather"
+import ProjectCard, { Project } from "../components/ProjectCard"
 
 const Home: NextPage = () => {
     
@@ -27,6 +28,39 @@ const Home: NextPage = () => {
                 </Text>
             )
         }
+    ]
+    
+    const projects: Array<Project> = [
+        // {
+        //     image: {
+        //         src: 'https://picsum.photos/200/200',
+        //         alt: 'Projet 1'
+        //     },
+        //     title: 'Projet 1',
+        //     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi assumenda cupiditate delectus dignissimos ea fugiat illum incidunt inventore magnam nisi",
+        //     tags: ['Tag 1', 'Tag 2', 'Tag 3'],
+        //     slug: 'project'
+        // },
+        // {
+        //     image: {
+        //         src: 'https://picsum.photos/200/200',
+        //         alt: 'Projet 2'
+        //     },
+        //     title: 'Projet 2',
+        //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi assumenda cupiditate delectus dignissimos ea fugiat illum incidunt inventore magnam nisi',
+        //     tags: ['Tag 1', 'Tag 2', 'Tag 3'],
+        //     slug: 'project'
+        // },
+        // {
+        //     image: {
+        //         src: 'https://picsum.photos/200/200',
+        //         alt: 'Projet 3'
+        //     },
+        //     title: 'Projet 3',
+        //     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi assumenda cupiditate delectus dignissimos ea fugiat illum incidunt inventore magnam nisi',
+        //     tags: ['Tag 1', 'Tag 2', 'Tag 3'],
+        //     slug: 'project'
+        // },
     ]
     
     const contacts: Array<ContactType> = [
@@ -51,6 +85,8 @@ const Home: NextPage = () => {
         //     icon: <Twitter size={20} />
         // },
     ]
+    
+    let delay = 0
     
     return (
         <Layout title={'Accueil'}>
@@ -101,6 +137,19 @@ const Home: NextPage = () => {
                     Homelabbing, vélo, musique, animation japonaise
                 </Paragraph>
             </Section>
+            <Section>
+                <SectionTitle>
+                    Projets
+                </SectionTitle>
+                { projects.length == 0 ?
+                    (<Text paddingBottom={6}>En cours de construction...</Text>) :
+                    projects.map((project, key) => {
+                        delay += 0.1
+                        return <ProjectCard key={key} project={project} delay={delay} />
+                    })
+                }
+            </Section>
+            
             <Section delay={0.2}>
                 <SectionTitle>
                     Contact
