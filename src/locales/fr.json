@@ -1,0 +1,28 @@
+{
+  "job_title": "Développeur Web",
+  "profile": {
+    "header": "Profil",
+    "text": "Je suis un développeur full-stack basé à Chartres (Centre-Val de Loire), avec une passion pour créer des choses qui facilitent et automatisent ma vie pour plus en profiter. Je possède les compétences pour développer des services et produits du cahier des charges, de la conception et du design, jusqu'au déploiement."
+  },
+  "experience": {
+    "header": "Expérience"
+  },
+  "hobbies": {
+    "header": "Passions",
+    "content": "Homelabbing, vélo, musique, animation japonaise"
+},
+  "projects": {
+    "header": "Projets"
+  },
+  "soon": "En cours de construction...",
+  "contact": {
+    "header": "Contact"
+  },
+  "timeline": {
+    "bts": "Obtention du BTS SIO",
+    "license": "Obtention de la licence web/mobile",
+    "cmin": "Travail à"
+  },
+  "cv_download": "Télécharger mon CV",
+  "footer": "Designed & Built by Baptiste Hardy"
+}

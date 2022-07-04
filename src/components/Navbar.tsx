@@ -18,8 +18,12 @@ import NextLink from 'next/link'
 import ThemeButton from './ThemeButton'
 import LinkItem from './LinkItem'
 import Logo from './Logo'
+import LanguageButton from "./LanguageButton"
+import { useTranslation } from "react-i18next"
 
 const Navbar = () => {
+    const { t } = useTranslation('global');
+    
     return (
         <Box
             position={'fixed'}
@@ -54,27 +58,28 @@ const Navbar = () => {
                     mt={{ base: 4, md: 0 }}
                 >
                     <LinkItem href={'/'}>
-                        Profil
+                        {t('profile.header')}
                     </LinkItem>
                     <LinkItem href={'/'}>
-                        Expérience
+                        {t('experience.header')}
                     </LinkItem>
                     <LinkItem href={'/'}>
-                        Projets {/* ou Travaux */}
+                        {t('projets.header')} {/* ou Travaux */}
                     </LinkItem>
                     <LinkItem href={'/'}>
-                        Contact
+                        {t('contact.header')}
                     </LinkItem>
                 </Stack>
     
                 { /** @ts-ignore */ }
-                <Box flex={1} align={'right'}>
+                <Box align={'right'}>
                     <Link href={'https://rxresu.me/baptistehardy/baha2022'} target={'_blank'} _hover={{ textDecoration: 'none' }}>
-                        <Button leftIcon={<DownloadIcon/>} mr={2} variant={'outline'} fontSize={'15px'} fontWeight={'normal'} title={'Télécharger mon CV'}>
+                        <Button leftIcon={<DownloadIcon/>} mr={2} variant={'outline'} fontSize={'15px'} fontWeight={'normal'} title={t('cv_download')}>
                             CV
                         </Button>
                     </Link>
                     <ThemeButton />
+                    <LanguageButton/>
                     
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
                         <Menu isLazy id={'navbar-menu'}>
@@ -86,7 +91,7 @@ const Navbar = () => {
                             />
                             <MenuList>
                                 <NextLink href={'/projects'} passHref>
-                                    <MenuItem as={Link}>Projets</MenuItem>
+                                    <MenuItem as={Link}>{t('projets.header')}</MenuItem>
                                 </NextLink>
                             </MenuList>
                         </Menu>

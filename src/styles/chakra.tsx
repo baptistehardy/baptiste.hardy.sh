@@ -1,18 +1,19 @@
 import '@fontsource/m-plus-1/400.css'
 import '@fontsource/cabin/400.css'
 
-import { ChakraProvider, cookieStorageManager, localStorageManager } from '@chakra-ui/react'
+import {
+    ChakraProvider,
+    createCookieStorageManager,
+    createLocalStorageManager,
+    localStorageManager } from '@chakra-ui/react'
 import theme from "./theme"
 
 export function Chakra({cookies, children}) {
     
-    const colorModeManager =
-        typeof cookies === 'string'
-            ? cookieStorageManager(cookies)
-            : localStorageManager
+    const localStorageManager = createLocalStorageManager('baptiste.hardy.sh')
     
     return (
-        <ChakraProvider colorModeManager={colorModeManager} theme={theme}>
+        <ChakraProvider colorModeManager={localStorageManager} theme={theme}>
             {children}
         </ChakraProvider>
     )

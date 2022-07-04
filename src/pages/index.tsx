@@ -8,23 +8,25 @@ import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/r
 import ContactList, { ContactType } from "../components/ContactList"
 import { GitHub, Gitlab, Instagram, Linkedin, Mail } from "react-feather"
 import ProjectCard, { Project } from "../components/ProjectCard"
+import { useTranslation } from "react-i18next";
 
 const Home: NextPage = () => {
+    const { t } = useTranslation('global');
     
     const timeline: Array<TimelineSectionType> = [
         {
             year: '2019',
-            description: 'Obtention du BTS SIO'
+            description: t('timeline.bts')
         },
         {
             year: '2020',
-            description: 'Obtention de la licence web/mobile'
+            description: t('timeline.license')
         },
         {
             year: '2021-',
             description: (
                 <Text as={'span'} marginLeft={-1.5}>
-                    Travail à <Text as={'span'} fontWeight={'bold'}><Text as={'span'} color={'#337ab7'}>CM&apos;</Text><Text as={'span'} color={'#b26012'}>IN</Text></Text>
+                    {t('timeline.cmin')} <Text as={'span'} fontWeight={'bold'}><Text as={'span'} color={'#337ab7'}>CM&apos;</Text><Text as={'span'} color={'#b26012'}>IN</Text></Text>
                 </Text>
             )
         }
@@ -117,42 +119,39 @@ const Home: NextPage = () => {
                             Baptiste Hardy
                         </Heading>
                         <Text as={'p'}>
-                            Développeur Web
+                            {t('job_title')}
                         </Text>
                     </Box>
                 </Flex>
             </Section>
             <Section delay={0}>
                 <SectionTitle>
-                    Profil
+                    {t('profile.header')}
                 </SectionTitle>
                 <Paragraph>
-                    Je suis un développeur full-stack basé à Chartres (Centre-Val de Loire),
-                    avec une passion pour créer des choses qui facilitent et automatisent ma vie pour plus en profiter.
-                    <br/>
-                    Je possède les compétences pour développer des services et produits du cahier des charges, de la conception et du design, jusqu&apos;au déploiement.
+                    {t('profile.text')}
                 </Paragraph>
             </Section>
             <Section delay={0.1}>
                 <SectionTitle>
-                    Expérience
+                    {t('experience.header')}
                 </SectionTitle>
                 <Timeline timeline={timeline} />
             </Section>
             <Section delay={0.2}>
                 <SectionTitle>
-                    Passions
+                    {t('hobbies.header')}
                 </SectionTitle>
                 <Paragraph>
-                    Homelabbing, vélo, musique, animation japonaise
+                    {t('hobbies.content')}
                 </Paragraph>
             </Section>
             <Section>
                 <SectionTitle>
-                    Projets
+                    {t('projects.header')}
                 </SectionTitle>
                 { projects.length == 0 ?
-                    (<Text paddingBottom={6}>En cours de construction...</Text>) :
+                    (<Text paddingBottom={6}>{t('soon')}</Text>) :
                     projects.map((project, key) => {
                         delay += 0.1
                         return <ProjectCard key={key} project={project} delay={delay} />
@@ -162,7 +161,7 @@ const Home: NextPage = () => {
             
             <Section delay={0.2}>
                 <SectionTitle>
-                    Contact
+                    {t('contact.header')}
                 </SectionTitle>
                 <ContactList contacts={contacts} />
             </Section>
