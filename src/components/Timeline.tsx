@@ -11,7 +11,11 @@ interface TimelineProps {
     children?: ReactNode
 }
 
-const TimelineSection: FunctionComponent = ({ children }) => {
+interface FCwChildren {
+    children: ReactNode;
+}
+
+const TimelineSection: FunctionComponent<FCwChildren> = ({ children }) => {
     return (
         <Box sx={{
             paddingLeft: '4em',
@@ -22,7 +26,7 @@ const TimelineSection: FunctionComponent = ({ children }) => {
     )
 }
 
-const TimelineYear: FunctionComponent = ({ children }) => {
+const TimelineYear: FunctionComponent<FCwChildren> = ({ children }) => {
     return (
         <Text as={'span'} sx={{
             fontWeight: 'bold',

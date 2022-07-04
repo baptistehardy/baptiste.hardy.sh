@@ -3,7 +3,11 @@ import { Badge, Heading, Image, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import { ChevronRightIcon } from "@chakra-ui/icons"
 
-const ProjectBadge: FunctionComponent = ({ children }) => {
+interface ProjectBadge {
+    children: ReactNode;
+}
+
+const ProjectBadge: FunctionComponent<ProjectBadge> = ({ children }) => {
     return (
         <Badge colorScheme={'blue'} marginRight={2}>{children}</Badge>
     )
