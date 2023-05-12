@@ -1,6 +1,6 @@
 import NextLink from "next/link"
 import { FunctionComponent } from "react"
-import { Img, Link } from "@chakra-ui/react"
+import { Img } from "@chakra-ui/react"
 
 const Logo: FunctionComponent = () => {
     return (

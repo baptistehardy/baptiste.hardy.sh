@@ -1,5 +1,21 @@
 {
-  "home": {
-    "profil": "yes"
-  }
+  "job_title": "Web developer",
+  "profile": {
+    "header": "Profile"
+  },
+  "experience": {
+    "header": "Experience"
+  },
+  "hobbies": {
+    "header": "Hobbies"
+  },
+  "projects": {
+    "header": "Projects"
+  },
+  "soon": "Work in progress...",
+  "contact": {
+    "header": "Contact"
+  },
+  "cv_download": "Download my resume",
+  "footer": "Designed & Built by Baptiste Hardy"
 }

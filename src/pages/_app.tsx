@@ -2,7 +2,7 @@ import { AnimatePresence } from 'framer-motion'
 import type { AppProps } from 'next/app'
 import { Chakra } from "../styles/chakra"
 import i18next from 'i18next';
-import { initReactI18next, I18nextProvider } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
 import en from '../locales/en.json';
 import fr from '../locales/fr.json';
 

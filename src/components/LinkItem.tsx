@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import { Link } from "@chakra-ui/react"
-import NextLink from "next/link"
 import { FunctionComponent, ReactNode } from "react"
 
 interface LinkItemProps {
