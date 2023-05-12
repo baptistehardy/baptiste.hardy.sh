@@ -6,9 +6,7 @@ const Logo: FunctionComponent = () => {
     return (
         // @ts-ignore
         <NextLink href={'/'}>
-            <Link>
-                <Img src={'/images/bhwh.svg'} boxSize={8} alt={'Baptiste Hardy logo'} />
-            </Link>
+            <Img src={'/images/bhwh.svg'} boxSize={8} alt={'Baptiste Hardy logo'} />
         </NextLink>
     )
 }

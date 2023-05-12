@@ -18,18 +18,16 @@ const LinkItem: FunctionComponent<LinkItemProps> = ({ href, target = '_self', ch
     // const activeColor = useColorModeValue('teal.500', 'teal.200')
     
     return (
-        <NextLink href={href} passHref>
-            <Link
-                p={2}
-                bg={(active && href != '/') ? 'rgba(0,0,0,0.25)' : ''}
-                borderRadius={5}
-                target={target}
-                textDecoration={'none'}
-                {...props}
-            >
-                {children}
-            </Link>
-        </NextLink>
+        <Link
+            p={2}
+            bg={(active && href != '/') ? 'rgba(0,0,0,0.25)' : ''}
+            borderRadius={5}
+            target={target}
+            textDecoration={'none'}
+            {...props}
+        >
+            {children}
+        </Link>
     )
 }
 

@@ -63,8 +63,8 @@ const Navbar = () => {
                     <LinkItem href={'/'}>
                         {t('experience.header')}
                     </LinkItem>
-                    <LinkItem href={'/'}>
-                        {t('projets.header')} {/* ou Travaux */}
+                    <LinkItem href={'/projects'}>
+                        {t('projects.header')} {/* ou Travaux */}
                     </LinkItem>
                     <LinkItem href={'/'}>
                         {t('contact.header')}
