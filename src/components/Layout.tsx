@@ -31,7 +31,7 @@ const Layout: FunctionComponent<MainLayoutProps> = ({ title, children }) => {
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="/card.png" />
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-                <title>Baptiste Hardy - {title || '???'}</title>
+                <title>{`Baptiste Hardy - ${title}`}</title>
             </Head>
             
             <Navbar />
