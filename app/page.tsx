@@ -1,18 +1,21 @@
+"use client"
+
+
 import type { NextPage } from 'next'
-import Layout from "../components/Layout"
-import Section from "../components/Section"
-import Paragraph from "../components/Paragraph"
-import SectionTitle from '../components/SectionTitle'
-import { Timeline, TimelineSectionType } from "../components/Timeline"
+import Layout from "@/components/Layout"
+import Section from "@/components/Section"
+import Paragraph from "@/components/Paragraph"
+import SectionTitle from '@/components/SectionTitle'
+import { Timeline, TimelineSectionType } from "@/components/Timeline"
 import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react"
-import ContactList, { ContactType } from "../components/ContactList"
+import ContactList, { ContactType } from "@/components/ContactList"
 import { GitHub, Gitlab, Instagram, Linkedin, Mail } from "react-feather"
-import ProjectCard, { Project } from "../components/ProjectCard"
+import ProjectCard, { Project } from "@/components/ProjectCard"
 import { useTranslation } from "react-i18next";
 
 const Home: NextPage = () => {
     const { t } = useTranslation('global');
-    
+
     const timeline: Array<TimelineSectionType> = [
         {
             year: '2019',
@@ -26,12 +29,14 @@ const Home: NextPage = () => {
             year: '2021-',
             description: (
                 <Text as={'span'} marginLeft={-1.5}>
-                    {t('timeline.cmin')} <Text as={'span'} fontWeight={'bold'}><Text as={'span'} color={'#337ab7'}>CM&apos;</Text><Text as={'span'} color={'#b26012'}>IN</Text></Text>
+                    {t('timeline.cmin')} <Text as={'span'} fontWeight={'bold'}><Text as={'span'}
+                                                                                     color={'#337ab7'}>CM&apos;</Text><Text
+                    as={'span'} color={'#b26012'}>IN</Text></Text>
                 </Text>
             )
         }
     ]
-    
+
     const projects: Array<Project> = [
         // {
         //     image: {
@@ -64,22 +69,22 @@ const Home: NextPage = () => {
         //     slug: 'project'
         // },
     ]
-    
+
     const contacts: Array<ContactType> = [
         {
             text: 'baptiste@hardy.sh',
             url: 'mailto:baptiste@hardy.sh',
-            icon: <Mail size={20} />
+            icon: <Mail size={20}/>
         },
         {
             text: '@baptistehardy',
             url: 'https://github.com/baptistehardy',
-            icon: <GitHub size={20} />
+            icon: <GitHub size={20}/>
         },
         {
             text: '@baptistehardy',
             url: 'https://gitlab.com/baptistehardy',
-            icon: <Gitlab size={20} />
+            icon: <Gitlab size={20}/>
         },
         // {
         //     text: '@hardyshdev',
@@ -89,7 +94,7 @@ const Home: NextPage = () => {
         {
             text: 'LinkedIn',
             url: 'https://linkedin.com/u/baptiste-hardy',
-            icon: <Linkedin size={20} />
+            icon: <Linkedin size={20}/>
         },
         // {
         //     text: 'Instagram',
@@ -97,9 +102,9 @@ const Home: NextPage = () => {
         //     icon: <Instagram size={20} />
         // },
     ]
-    
+
     let delay = 0
-    
+
     return (
         <Layout title={'Accueil'}>
             <Section delay={0}>
@@ -136,7 +141,7 @@ const Home: NextPage = () => {
                 <SectionTitle>
                     {t('experience.header')}
                 </SectionTitle>
-                <Timeline timeline={timeline} />
+                <Timeline timeline={timeline}/>
             </Section>
             <Section delay={0.2}>
                 <SectionTitle>
@@ -150,25 +155,23 @@ const Home: NextPage = () => {
                 <SectionTitle>
                     {t('projects.header')}
                 </SectionTitle>
-                { projects.length == 0 ?
+                {projects.length == 0 ?
                     (<Text paddingBottom={6}>{t('soon')}</Text>) :
                     projects.map((project, key) => {
                         delay += 0.1
-                        return <ProjectCard key={key} project={project} delay={delay} />
+                        return <ProjectCard key={key} project={project} delay={delay}/>
                     })
                 }
             </Section>
-            
+
             <Section delay={0.2}>
                 <SectionTitle>
                     {t('contact.header')}
                 </SectionTitle>
-                <ContactList contacts={contacts} />
+                <ContactList contacts={contacts}/>
             </Section>
         </Layout>
     )
 }
 
 export default Home
-
-export { getServerSideProps } from "../styles/chakra";

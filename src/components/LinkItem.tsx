@@ -1,4 +1,6 @@
-import { useRouter } from "next/router"
+"use client"
+
+import { useRouter } from "next/navigation"
 import { Link } from "@chakra-ui/react"
 import { FunctionComponent, ReactNode } from "react"
 
