@@ -7,11 +7,11 @@ import Section from "@/components/Section"
 import Paragraph from "@/components/Paragraph"
 import SectionTitle from '@/components/SectionTitle'
 import { Timeline, TimelineSectionType } from "@/components/Timeline"
-import { Box, Flex, Heading, Image, Text, useColorModeValue } from "@chakra-ui/react"
 import ContactList, { ContactType } from "@/components/ContactList"
 import { GitHub, Gitlab, Instagram, Linkedin, Mail } from "react-feather"
 import ProjectCard, { Project } from "@/components/ProjectCard"
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const Home: NextPage = () => {
     const { t } = useTranslation('global');
@@ -28,11 +28,9 @@ const Home: NextPage = () => {
         {
             year: '2021-',
             description: (
-                <Text as={'span'} marginLeft={-1.5}>
-                    {t('timeline.cmin')} <Text as={'span'} fontWeight={'bold'}><Text as={'span'}
-                                                                                     color={'#337ab7'}>CM&apos;</Text><Text
-                    as={'span'} color={'#b26012'}>IN</Text></Text>
-                </Text>
+                <span>
+                    {t('timeline.cmin')} <span><span>CM&apos;</span><span>IN</span></span>
+                </span>
             )
         }
     ]
@@ -108,26 +106,22 @@ const Home: NextPage = () => {
     return (
         <Layout title={'Accueil'}>
             <Section delay={0}>
-                <Flex>
+                <div>
                     <Image
-                        borderRadius={'full'}
-                        boxSize={100}
                         src={'/images/avi.jpg'}
                         alt={'avi'}
-                        marginRight={5}
-                        border={'2px solid'}
-                        // @ts-ignore
-                        borderColor={useColorModeValue('#000000BF', '#FFFFFFBF')}
+                        width={60}
+                        height={60}
                     />
-                    <Box>
-                        <Heading>
+                    <div>
+                        <h1 className={`font-bold`}>
                             Baptiste Hardy
-                        </Heading>
-                        <Text as={'p'}>
+                        </h1>
+                        <p>
                             {t('job_title')}
-                        </Text>
-                    </Box>
-                </Flex>
+                        </p>
+                    </div>
+                </div>
             </Section>
             <Section delay={0}>
                 <SectionTitle>
@@ -156,7 +150,7 @@ const Home: NextPage = () => {
                     {t('projects.header')}
                 </SectionTitle>
                 {projects.length == 0 ?
-                    (<Text paddingBottom={6}>{t('soon')}</Text>) :
+                    (<p>{t('soon')}</p>) :
                     projects.map((project, key) => {
                         delay += 0.1
                         return <ProjectCard key={key} project={project} delay={delay}/>

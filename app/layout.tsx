@@ -8,6 +8,7 @@ import { cookies } from "next/headers";
 import theme from "@/styles/theme";
 import { ColorModeScript } from "@chakra-ui/react";
 import { Providers } from "@/providers";
+import '@/styles/global.css'
 
 export interface RootLayoutProps {
     children: ReactNode
@@ -33,9 +34,9 @@ export const RootLayout: FC<RootLayoutProps> = ({ children }) => {
     return (
         <html lang="fr">
         <body>
-                <Providers>
-                    {children}
-                </Providers>
+            <Providers>
+                {children}
+            </Providers>
         </body>
         </html>
     )

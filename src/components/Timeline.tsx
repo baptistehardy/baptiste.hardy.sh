@@ -1,5 +1,4 @@
 import { FunctionComponent, ReactNode } from "react"
-import { Box, Text } from "@chakra-ui/react"
 
 type TimelineSectionType = {
     year: string,
@@ -17,23 +16,17 @@ interface FCwChildren {
 
 const TimelineSection: FunctionComponent<FCwChildren> = ({ children }) => {
     return (
-        <Box sx={{
-            paddingLeft: '4em',
-            textIndent: '-4em'
-        }}>
+        <div>
             {children}
-        </Box>
+        </div>
     )
 }
 
 const TimelineYear: FunctionComponent<FCwChildren> = ({ children }) => {
     return (
-        <Text as={'span'} sx={{
-            fontWeight: 'bold',
-            marginRight: '1em'
-        }}>
+        <span>
             {children}
-        </Text>
+        </span>
     )
 }
 

@@ -1,7 +1,6 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { Link } from "@chakra-ui/react"
 import { FunctionComponent, ReactNode } from "react"
 
 interface LinkItemProps {
@@ -19,16 +18,9 @@ const LinkItem: FunctionComponent<LinkItemProps> = ({ href, target = '_self', ch
     // const activeColor = useColorModeValue('teal.500', 'teal.200')
     
     return (
-        <Link
-            p={2}
-            bg={(active && href != '/') ? 'rgba(0,0,0,0.25)' : ''}
-            borderRadius={5}
-            target={target}
-            textDecoration={'none'}
-            {...props}
-        >
+        <div>
             {children}
-        </Link>
+        </div>
     )
 }
 

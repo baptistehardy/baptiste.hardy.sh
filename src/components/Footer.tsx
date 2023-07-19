@@ -1,17 +1,19 @@
+"use client"
+
 import { FunctionComponent } from "react"
-import { Box, Link, Text } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
+import Link from "next/link";
 
 const Footer: FunctionComponent = () => {
     const { t } = useTranslation('global');
     
     return (
         // @ts-ignore
-        <Box align={'center'} fontSize={'sm'} opacity={0.7}>
+        <div>
             <Link href={'https://github.com/baptistehardy/baptiste.hardy.sh'} target={'_blank'}>
-                <Text>{t('footer')}</Text>
+                <span>{t('footer')}</span>
             </Link>
-        </Box>
+        </div>
     )
 }
 

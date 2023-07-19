@@ -1,15 +1,7 @@
-import { Box, Container } from "@chakra-ui/react"
 import Head from "next/head"
 import Navbar from "./Navbar"
-import { motion } from "framer-motion"
 import { FunctionComponent, ReactNode } from "react"
 import Footer from "./Footer"
-
-const variants = {
-    hidden: { opacity: 0, x: 0, y: 20 },
-    enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: -0, y: 20 }
-}
 
 interface MainLayoutProps {
     title: string,
@@ -18,7 +10,7 @@ interface MainLayoutProps {
 
 const Layout: FunctionComponent<MainLayoutProps> = ({ title, children }) => {
     return (
-        <Box as="main" pb={8}>
+        <div>
             <Head>
                 <meta name="description" content="Baptiste Hardy's website" />
                 <meta name="author" content="Baptiste Hardy" />
@@ -36,20 +28,12 @@ const Layout: FunctionComponent<MainLayoutProps> = ({ title, children }) => {
             
             <Navbar />
             
-            <Container maxW="container.sm" pt={20}>
-                <motion.div
-                    variants={variants}
-                    initial="hidden"
-                    animate="enter"
-                    exit="exit"
-                    transition={{ type: 'easeInOut', duration: 0.4 }}
-                >
-                    {children}
-                </motion.div>
-            </Container>
+            <div>
+                {children}
+            </div>
     
             <Footer/>
-        </Box>
+        </div>
     )
 }
 

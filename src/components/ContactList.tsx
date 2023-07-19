@@ -1,5 +1,5 @@
 import { FunctionComponent, ReactNode } from "react"
-import { Button, Link, List, ListItem } from "@chakra-ui/react"
+import Link from "next/link";
 
 type ContactType = {
     text: string,
@@ -13,20 +13,18 @@ interface ContactListProps {
 
 const ContactList: FunctionComponent<ContactListProps> = ({ contacts }) => {
     return (
-        <List>
+        <div>
             {contacts.map((contact, key) => {
                 return (
-                    <ListItem key={key}>
+                    <div key={key}>
                         <Link href={contact.url} target={'_blank'} _hover={{ textDecoration: 'none' }}>
                             {/*// @ts-ignore */}
-                            <Button variant={'ghost'} colorScheme={'gray'} leftIcon={contact.icon}>
-                                {contact.text}
-                            </Button>
+                            {contact.text}
                         </Link>
-                    </ListItem>
+                    </div>
                 )
             })}
-        </List>
+        </div>
     )
 }
 

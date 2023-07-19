@@ -1,5 +1,5 @@
-import { Button, useColorModeValue } from '@chakra-ui/react'
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+"use client"
+
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from "react"
 
@@ -17,16 +17,9 @@ const LanguageButton = () => {
     };
     
     return (
-        <Button
-            aria-label={'Language toggle'}
-            onClick={toggleLanguage}
-            ml={2}
-            variant={'outline'}
-            fontSize={'15px'}
-            fontWeight={'normal'}
-        >
+        <button>
             {lang}
-        </Button>
+        </button>
     )
 }
 

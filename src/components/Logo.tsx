@@ -1,12 +1,12 @@
 import NextLink from "next/link"
 import { FunctionComponent } from "react"
-import { Img } from "@chakra-ui/react"
+import Image from "next/image"
 
 const Logo: FunctionComponent = () => {
     return (
         // @ts-ignore
         <NextLink href={'/'}>
-            <Img src={'/images/bhwh.svg'} boxSize={8} alt={'Baptiste Hardy logo'} />
+            <Image src={'/images/bhwh.svg'} alt={'Baptiste Hardy logo'} width={30} height={30} />
         </NextLink>
     )
 }
