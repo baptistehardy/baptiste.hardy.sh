@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <nav className={`backdrop-blur-sm bg-black/50 text-white/75`}>
-            <div className={`mx-auto max-w-7xl ps-2 sm:px-6 lg:px-8`} id={`main-menu`}>
+            <div className={`mx-auto max-w-4xl ps-2 sm:px-6 lg:px-8`} id={`main-menu`}>
                 <div className={`relative flex h-12 items-center`}>
                     <div className={`flex flex-1 items-center justify-center sm:items-stretch sm:justify-start`}>
                         <div className={`flex flex-shrink-0 items-center`}>
