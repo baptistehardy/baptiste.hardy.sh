@@ -33,7 +33,7 @@ export const RootLayout: FC<RootLayoutProps> = ({ children }) => {
 
     return (
         <html lang="fr">
-        <body>
+        <body className={`bg-[#111111]`}>
             <Providers>
                 {children}
             </Providers>

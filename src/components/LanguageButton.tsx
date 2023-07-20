@@ -17,7 +17,7 @@ const LanguageButton = () => {
     };
     
     return (
-        <button>
+        <button onClick={toggleLanguage}>
             {lang}
         </button>
     )
