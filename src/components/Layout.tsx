@@ -1,10 +1,10 @@
-import Head from "next/head"
-import Navbar from "./Navbar"
-import { FunctionComponent, ReactNode } from "react"
-import Footer from "./Footer"
+import Head from 'next/head'
+import Navbar from './Navbar'
+import { FunctionComponent, ReactNode } from 'react'
+import Footer from './Footer'
 
 interface MainLayoutProps {
-    title: string,
+    title: string
     children: ReactNode
 }
 
@@ -25,14 +25,12 @@ const Layout: FunctionComponent<MainLayoutProps> = ({ title, children }) => {
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
                 <title>{`Baptiste Hardy - ${title}`}</title>
             </Head>
-            
+
             <Navbar />
-            
-            <div>
-                {children}
-            </div>
-    
-            <Footer/>
+
+            <div>{children}</div>
+
+            <Footer />
         </div>
     )
 }

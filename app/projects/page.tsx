@@ -1,17 +1,16 @@
-import { NextPage } from "next"
-import Layout from "@/components/Layout"
-import { GitHub } from "react-feather"
-import { ProjectBadge, ProjectImage, ProjectTitle } from "@/components/ProjectDetails"
-import Paragraph from "@/components/Paragraph"
-import Image from "next/image"
-import Link from "next/navigation"
+import { NextPage } from 'next'
+import Layout from '@/components/Layout'
+import { GitHub } from 'react-feather'
+import { ProjectBadge, ProjectImage, ProjectTitle } from '@/components/ProjectDetails'
+import Paragraph from '@/components/Paragraph'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const ProjectsPage: NextPage = () => {
-
     return (
         <Layout title={'Page'}>
             <div>
-                <ProjectTitle projectName={'Page'} years={'2022'}/>
+                <ProjectTitle projectName={'Page'} years={'2022'} />
 
                 <div>
                     {/*<Image src={'https://picsum.photos/400/200'} alt="Page Image" width={100} height={100}/>*/}

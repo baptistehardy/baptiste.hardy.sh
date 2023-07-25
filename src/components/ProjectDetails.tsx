@@ -1,36 +1,30 @@
-import { FunctionComponent, ReactNode } from "react"
-import NextLink from "next/link"
+import { FunctionComponent, ReactNode } from 'react'
+import NextLink from 'next/link'
 
 interface ProjectBadge {
-    children: ReactNode;
+    children: ReactNode
 }
 
 const ProjectBadge: FunctionComponent<ProjectBadge> = ({ children }) => {
-    return (
-        <></>
-    )
+    return <></>
 }
 
 interface ProjectImageProps {
-    src: string,
+    src: string
     alt: string
 }
 
 const ProjectImage: FunctionComponent<ProjectImageProps> = ({ src, alt }) => {
-    return (
-        <></>
-    )
+    return <></>
 }
 
 interface ProjectTitleProps {
-    projectName: string,
+    projectName: string
     years: string
 }
 
 const ProjectTitle: FunctionComponent<ProjectTitleProps> = ({ projectName, years }) => {
-    return (
-        <></>
-    )
+    return <></>
 }
 
 export { ProjectBadge, ProjectImage, ProjectTitle }
