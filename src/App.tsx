@@ -1,9 +1,7 @@
-import './App.css'
-
 function App() {
   return (
     <>
-      <h1>baptiste.hardy.sh</h1>
+      <h1 className="text-5xl text-white font-semibold">baptiste.hardy.sh</h1>
     </>
   )
 }
