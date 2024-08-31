@@ -1,47 +1,29 @@
 {
   "name": "baptiste.hardy.sh",
-  "author": "Baptiste Hardy <baptiste@hardy.sh",
-  "version": "0.1.0",
-  "description": "Baptiste Hardy's website",
-  "license": "MIT",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/cabin": "^5.0",
-    "@fontsource/m-plus-1": "^5.0",
-    "framer-motion": "^10.13",
-    "i18next": "^23.2",
-    "next": "13.4",
-    "react": "^18.2",
-    "react-dom": "18.2",
-    "react-feather": "^2.0",
-    "react-i18next": "^12.3",
-    "tailwindcss": "^3.3.3"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "18.16",
-    "@types/react": "^18.2",
-    "@types/react-dom": "^18.2",
-    "@typescript-eslint/eslint-plugin": "^6.2.0",
-    "@typescript-eslint/parser": "^6.2.0",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.45.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "^13.4",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react": "^7.33.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "postcss": "^8.4.26",
-    "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.4.1",
-    "typescript": "5.1"
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1"
   }
 }
