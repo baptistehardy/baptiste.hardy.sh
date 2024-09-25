@@ -1,19 +1,23 @@
 import { Section } from "./components/Section.tsx";
 import { Hero } from "./components/Hero.tsx";
+import { Footer } from "./components/Footer.tsx";
 
 function App() {
     return (
         <>
             <Hero>
                 <h1 className="text-5xl font-semibold my-12">Baptiste Hardy</h1>
-                <p>
-                    Développeur full-stack basé à Chartres
-                    (Centre-Val de Loire)
-                    <br/>
-                    Je possède les compétences pour développer des
-                    services et produits du cahier des charges, de la conception
-                    et du design, jusqu'au déploiement.
-                </p>
+                <div>
+                    <p className="pb-4">
+                        Développeur full-stack basé à Chartres
+                        (Centre-Val de Loire)
+                    </p>
+                    <p>
+                        Je possède les compétences pour développer des
+                        services et produits du cahier des charges, de la conception
+                        et du design, jusqu'au déploiement.
+                    </p>
+                </div>
             </Hero>
             <Section title={"Skills"}>
                 <h3 className="text-xl text-semibold my-2">Langages</h3>
@@ -68,6 +72,7 @@ function App() {
                     <li>Fan d'animation</li>
                 </ul>
             </Section>
+            <Footer />
         </>
     )
 }
