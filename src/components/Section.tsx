@@ -7,8 +7,10 @@ interface SectionProps extends PropsWithChildren {
 export const Section: FC<SectionProps> = ({ title, children }) => {
     return (
         <section className="h-dvh grid content-center">
-            <h2 className="text-2xl text-bold my-4">{title}</h2>
-            {children}
+            <div className="mx-8">
+                <h2 className="text-2xl text-bold my-4">{title}</h2>
+                {children}
+            </div>
         </section>
     )
 }
