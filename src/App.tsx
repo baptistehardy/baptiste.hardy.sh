@@ -1,10 +1,12 @@
 import { Section } from "./components/Section.tsx";
 import { Hero } from "./components/Hero.tsx";
 import { Footer } from "./components/Footer.tsx";
+import { Navbar } from "./components/Navbar.tsx";
 
 function App() {
     return (
         <>
+            <Navbar/>
             <Hero>
                 <h1 className="text-5xl font-semibold my-12">Baptiste Hardy</h1>
                 <div>
